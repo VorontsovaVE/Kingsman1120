@@ -8,6 +8,10 @@
 
 ![image](https://user-images.githubusercontent.com/126570601/225684825-be3b35f6-9920-4427-b96d-2c502d9e2470.png)
 
+<b>Добавдение БД в WPF</b>
+
+![image](https://user-images.githubusercontent.com/126570601/225825512-ef8589f0-dc44-4d59-b71e-b518399b24b1.png)
+
 <b>Окно Авторизации</b>
 
 ![image](https://user-images.githubusercontent.com/126570601/225821423-e42c606b-8841-42db-898f-4cd41a979017.png)
