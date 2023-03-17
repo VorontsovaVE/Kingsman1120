@@ -15,23 +15,13 @@ using System.Windows.Shapes;
 namespace Kingsman20.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для AuthWindow.xaml
+    /// Логика взаимодействия для ServiceWindow.xaml
     /// </summary>
-    public partial class AuthWindow : Window
+    public partial class ServiceWindow : Window
     {
-        public AuthWindow()
+        public ServiceWindow()
         {
             InitializeComponent();
-        }
-
-        private void BtnSIngIn_Click(object sender, RoutedEventArgs e)
-        {
-            
-            //перенаправка на сервис
-            ServiceWindow serviceWindow = new ServiceWindow();
-            this.Hide();
-            serviceWindow.ShowDialog();
-            this.Show();
         }
     }
 }
