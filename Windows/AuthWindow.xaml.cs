@@ -26,7 +26,7 @@ namespace Kingsman20.Windows
 
         private void BtnSIngIn_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine(":)");
+            MessageBox.Show("ok");
         }
     }
 }
