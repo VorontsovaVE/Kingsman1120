@@ -26,12 +26,22 @@ namespace Kingsman20.Windows
 
         private void BtnSIngIn_Click(object sender, RoutedEventArgs e)
         {
-            
-            //перенаправка на сервис
-            ServiceWindow serviceWindow = new ServiceWindow();
-            this.Hide();
-            serviceWindow.ShowDialog();
-            this.Show();
+
+            //проверка на наличие поль-я
+            var userAuth = ClassHelper.EF.Context.Employee.ToList().
+                Where(i => i.Login == TbLogin.Text && i.Password == PbPassword.Password).
+                FirstOrDefault();
+            if (userAuth != null)
+            {
+                //cписок услуг
+                ServiceWindow serviceWindow1 = new ServiceWindow();
+                serviceWindow1.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="ServiceWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBlock Text="Вход удачен"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,60,0,60" Foreground="Black"/>
     </Grid>
 </Window>

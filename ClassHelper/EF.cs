@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Kingsman20.ClassHelper
 {
-    internal class EP
+    internal class EF
     {
+        public static DataBase.Entities Context { get; } = new DataBase.Entities();
     }
 }
