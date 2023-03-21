@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a8aea0622b8b47ee90d43271ecf050b9" Name="Diagram1">
+      <Diagram DiagramId="a8aea0622b8b47ee90d43271ecf050b9" Name="Diagram1" ZoomLevel="86">
         <EntityTypeShape EntityType="KingsmanModel.Branch" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
         <EntityTypeShape EntityType="KingsmanModel.Client" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="KingsmanModel.EmplBranch" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
