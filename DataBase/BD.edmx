@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище KingsmanModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище KingsmanModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Branch">
           <Key>
             <PropertyRef Name="IDBranch" />
@@ -92,7 +92,7 @@
           <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="IdTypeIfService" Type="int" Nullable="false" />
-          <Property Name="Discription" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Discription" Type="nvarchar" MaxLength="250" />
           <Property Name="Photo" Type="nvarchar" MaxLength="2500" />
         </EntityType>
         <EntityType Name="Size">
@@ -341,337 +341,11 @@
             <End Role="Client" EntitySet="Client" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KingsmanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Branch">
-          <Key>
-            <PropertyRef Name="IDBranch" />
-          </Key>
-          <Property Name="IDBranch" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="EmplBranch" Relationship="Self.FK__EmplBranc__IdBra__5629CD9C" FromRole="Branch" ToRole="EmplBranch" />
-        </EntityType>
-        <EntityType Name="Client">
-          <Key>
-            <PropertyRef Name="IDClient" />
-          </Key>
-          <Property Name="IDClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IdGender" Type="Int32" Nullable="false" />
-          <Property Name="Bithday" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IdTopSIze" Type="Int32" />
-          <Property Name="IdBottomSize" Type="Int32" />
-          <Property Name="BootsSize" Type="Decimal" Precision="3" Scale="1" />
-          <Property Name="Discount" Type="Double" />
-          <NavigationProperty Name="Gender" Relationship="Self.FK__Client__IdGender__44FF419A" FromRole="Client" ToRole="Gender" />
-          <NavigationProperty Name="Order" Relationship="Self.FK__Order__IdClient__5EBF139D" FromRole="Client" ToRole="Order" />
-          <NavigationProperty Name="Size" Relationship="Self.FK_Client_Size" FromRole="Client" ToRole="Size" />
-          <NavigationProperty Name="Size1" Relationship="Self.FK_Client_Size1" FromRole="Client" ToRole="Size" />
-        </EntityType>
-        <EntityType Name="EmplBranch">
-          <Key>
-            <PropertyRef Name="IDEmpBranch" />
-          </Key>
-          <Property Name="IDEmpBranch" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdEmployeer" Type="Int32" Nullable="false" />
-          <Property Name="IdBranch" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Branch" Relationship="Self.FK__EmplBranc__IdBra__5629CD9C" FromRole="EmplBranch" ToRole="Branch" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__EmplBranc__IdEmp__5535A963" FromRole="EmplBranch" ToRole="Employee" />
-        </EntityType>
-        <EntityType Name="Employee">
-          <Key>
-            <PropertyRef Name="IDEmployee" />
-          </Key>
-          <Property Name="IDEmployee" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="IdPosition" Type="Int32" Nullable="false" />
-          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="EmplBranch" Relationship="Self.FK__EmplBranc__IdEmp__5535A963" FromRole="Employee" ToRole="EmplBranch" />
-          <NavigationProperty Name="Position" Relationship="Self.FK__Employee__IdPosi__52593CB8" FromRole="Employee" ToRole="Position" />
-          <NavigationProperty Name="Order" Relationship="Self.FK__Order__IdEmploye__5DCAEF64" FromRole="Employee" ToRole="Order" />
-        </EntityType>
-        <EntityType Name="Gender">
-          <Key>
-            <PropertyRef Name="IDGender" />
-          </Key>
-          <Property Name="IDGender" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Client" Relationship="Self.FK__Client__IdGender__44FF419A" FromRole="Gender" ToRole="Client" />
-        </EntityType>
-        <EntityType Name="Order">
-          <Key>
-            <PropertyRef Name="IDOrder" />
-          </Key>
-          <Property Name="IDOrder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="IdClient" Type="Int32" Nullable="false" />
-          <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="EndDate" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="Client" Relationship="Self.FK__Order__IdClient__5EBF139D" FromRole="Order" ToRole="Client" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__Order__IdEmploye__5DCAEF64" FromRole="Order" ToRole="Employee" />
-          <NavigationProperty Name="OrderService" Relationship="Self.FK__OrderServ__IdOrd__619B8048" FromRole="Order" ToRole="OrderService" />
-        </EntityType>
-        <EntityType Name="OrderService">
-          <Key>
-            <PropertyRef Name="IDOrderService" />
-          </Key>
-          <Property Name="IDOrderService" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdOrder" Type="Int32" Nullable="false" />
-          <Property Name="IdService" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Order" Relationship="Self.FK__OrderServ__IdOrd__619B8048" FromRole="OrderService" ToRole="Order" />
-          <NavigationProperty Name="Service" Relationship="Self.FK__OrderServ__IdSer__628FA481" FromRole="OrderService" ToRole="Service" />
-        </EntityType>
-        <EntityType Name="Position">
-          <Key>
-            <PropertyRef Name="IDPosition" />
-          </Key>
-          <Property Name="IDPosition" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Salary" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__Employee__IdPosi__52593CB8" FromRole="Position" ToRole="Employee" />
-        </EntityType>
-        <EntityType Name="Service">
-          <Key>
-            <PropertyRef Name="IDService" />
-          </Key>
-          <Property Name="IDService" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="IdTypeIfService" Type="Int32" Nullable="false" />
-          <Property Name="Discription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Photo" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="OrderService" Relationship="Self.FK__OrderServ__IdSer__628FA481" FromRole="Service" ToRole="OrderService" />
-          <NavigationProperty Name="TypeOfService" Relationship="Self.FK__Service__IdTypeI__5AEE82B9" FromRole="Service" ToRole="TypeOfService" />
-        </EntityType>
-        <EntityType Name="Size">
-          <Key>
-            <PropertyRef Name="IDSize" />
-          </Key>
-          <Property Name="IDSize" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Size1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Discription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Client" Relationship="Self.FK_Client_Size" FromRole="Size" ToRole="Client" />
-          <NavigationProperty Name="Client1" Relationship="Self.FK_Client_Size1" FromRole="Size" ToRole="Client" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="TypeOfService">
-          <Key>
-            <PropertyRef Name="IDTypeOfService" />
-          </Key>
-          <Property Name="IDTypeOfService" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Service" Relationship="Self.FK__Service__IdTypeI__5AEE82B9" FromRole="TypeOfService" ToRole="Service" />
-        </EntityType>
-        <Association Name="FK__EmplBranc__IdBra__5629CD9C">
-          <End Role="Branch" Type="Self.Branch" Multiplicity="1" />
-          <End Role="EmplBranch" Type="Self.EmplBranch" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Branch">
-              <PropertyRef Name="IDBranch" />
-            </Principal>
-            <Dependent Role="EmplBranch">
-              <PropertyRef Name="IdBranch" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Client__IdGender__44FF419A">
-          <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
-          <End Role="Client" Type="Self.Client" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Gender">
-              <PropertyRef Name="IDGender" />
-            </Principal>
-            <Dependent Role="Client">
-              <PropertyRef Name="IdGender" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Order__IdClient__5EBF139D">
-          <End Role="Client" Type="Self.Client" Multiplicity="1" />
-          <End Role="Order" Type="Self.Order" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Client">
-              <PropertyRef Name="IDClient" />
-            </Principal>
-            <Dependent Role="Order">
-              <PropertyRef Name="IdClient" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Client_Size">
-          <End Role="Size" Type="Self.Size" Multiplicity="0..1" />
-          <End Role="Client" Type="Self.Client" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Size">
-              <PropertyRef Name="IDSize" />
-            </Principal>
-            <Dependent Role="Client">
-              <PropertyRef Name="IdTopSIze" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Client_Size1">
-          <End Role="Size" Type="Self.Size" Multiplicity="0..1" />
-          <End Role="Client" Type="Self.Client" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Size">
-              <PropertyRef Name="IDSize" />
-            </Principal>
-            <Dependent Role="Client">
-              <PropertyRef Name="IdBottomSize" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__EmplBranc__IdEmp__5535A963">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
-          <End Role="EmplBranch" Type="Self.EmplBranch" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Employee">
-              <PropertyRef Name="IDEmployee" />
-            </Principal>
-            <Dependent Role="EmplBranch">
-              <PropertyRef Name="IdEmployeer" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Employee__IdPosi__52593CB8">
-          <End Role="Position" Type="Self.Position" Multiplicity="1" />
-          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Position">
-              <PropertyRef Name="IDPosition" />
-            </Principal>
-            <Dependent Role="Employee">
-              <PropertyRef Name="IdPosition" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Order__IdEmploye__5DCAEF64">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
-          <End Role="Order" Type="Self.Order" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Employee">
-              <PropertyRef Name="IDEmployee" />
-            </Principal>
-            <Dependent Role="Order">
-              <PropertyRef Name="IdEmployee" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__OrderServ__IdOrd__619B8048">
-          <End Role="Order" Type="Self.Order" Multiplicity="1" />
-          <End Role="OrderService" Type="Self.OrderService" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Order">
-              <PropertyRef Name="IDOrder" />
-            </Principal>
-            <Dependent Role="OrderService">
-              <PropertyRef Name="IdOrder" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__OrderServ__IdSer__628FA481">
-          <End Role="Service" Type="Self.Service" Multiplicity="1" />
-          <End Role="OrderService" Type="Self.OrderService" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Service">
-              <PropertyRef Name="IDService" />
-            </Principal>
-            <Dependent Role="OrderService">
-              <PropertyRef Name="IdService" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Service__IdTypeI__5AEE82B9">
-          <End Role="TypeOfService" Type="Self.TypeOfService" Multiplicity="1" />
-          <End Role="Service" Type="Self.Service" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TypeOfService">
-              <PropertyRef Name="IDTypeOfService" />
-            </Principal>
-            <Dependent Role="Service">
-              <PropertyRef Name="IdTypeIfService" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Branch" EntityType="Self.Branch" />
-          <EntitySet Name="Client" EntityType="Self.Client" />
-          <EntitySet Name="EmplBranch" EntityType="Self.EmplBranch" />
-          <EntitySet Name="Employee" EntityType="Self.Employee" />
-          <EntitySet Name="Gender" EntityType="Self.Gender" />
-          <EntitySet Name="Order" EntityType="Self.Order" />
-          <EntitySet Name="OrderService" EntityType="Self.OrderService" />
-          <EntitySet Name="Position" EntityType="Self.Position" />
-          <EntitySet Name="Service" EntityType="Self.Service" />
-          <EntitySet Name="Size" EntityType="Self.Size" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-          <EntitySet Name="TypeOfService" EntityType="Self.TypeOfService" />
-          <AssociationSet Name="FK__EmplBranc__IdBra__5629CD9C" Association="Self.FK__EmplBranc__IdBra__5629CD9C">
-            <End Role="Branch" EntitySet="Branch" />
-            <End Role="EmplBranch" EntitySet="EmplBranch" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Client__IdGender__44FF419A" Association="Self.FK__Client__IdGender__44FF419A">
-            <End Role="Gender" EntitySet="Gender" />
-            <End Role="Client" EntitySet="Client" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Order__IdClient__5EBF139D" Association="Self.FK__Order__IdClient__5EBF139D">
-            <End Role="Client" EntitySet="Client" />
-            <End Role="Order" EntitySet="Order" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Client_Size" Association="Self.FK_Client_Size">
-            <End Role="Size" EntitySet="Size" />
-            <End Role="Client" EntitySet="Client" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Client_Size1" Association="Self.FK_Client_Size1">
-            <End Role="Size" EntitySet="Size" />
-            <End Role="Client" EntitySet="Client" />
-          </AssociationSet>
-          <AssociationSet Name="FK__EmplBranc__IdEmp__5535A963" Association="Self.FK__EmplBranc__IdEmp__5535A963">
-            <End Role="Employee" EntitySet="Employee" />
-            <End Role="EmplBranch" EntitySet="EmplBranch" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Employee__IdPosi__52593CB8" Association="Self.FK__Employee__IdPosi__52593CB8">
-            <End Role="Position" EntitySet="Position" />
-            <End Role="Employee" EntitySet="Employee" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Order__IdEmploye__5DCAEF64" Association="Self.FK__Order__IdEmploye__5DCAEF64">
-            <End Role="Employee" EntitySet="Employee" />
-            <End Role="Order" EntitySet="Order" />
-          </AssociationSet>
-          <AssociationSet Name="FK__OrderServ__IdOrd__619B8048" Association="Self.FK__OrderServ__IdOrd__619B8048">
-            <End Role="Order" EntitySet="Order" />
-            <End Role="OrderService" EntitySet="OrderService" />
-          </AssociationSet>
-          <AssociationSet Name="FK__OrderServ__IdSer__628FA481" Association="Self.FK__OrderServ__IdSer__628FA481">
-            <End Role="Service" EntitySet="Service" />
-            <End Role="OrderService" EntitySet="OrderService" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Service__IdTypeI__5AEE82B9" Association="Self.FK__Service__IdTypeI__5AEE82B9">
-            <End Role="TypeOfService" EntitySet="TypeOfService" />
-            <End Role="Service" EntitySet="Service" />
-          </AssociationSet>
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -702,6 +376,62 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="Branch" EntityType="KingsmanModel.Branch" />
+          <EntitySet Name="Client" EntityType="KingsmanModel.Client" />
+          <EntitySet Name="EmplBranch" EntityType="KingsmanModel.EmplBranch" />
+          <EntitySet Name="Employee" EntityType="KingsmanModel.Employee" />
+          <EntitySet Name="Gender" EntityType="KingsmanModel.Gender" />
+          <EntitySet Name="Order" EntityType="KingsmanModel.Order" />
+          <EntitySet Name="OrderService" EntityType="KingsmanModel.OrderService" />
+          <EntitySet Name="Position" EntityType="KingsmanModel.Position" />
+          <EntitySet Name="Service" EntityType="KingsmanModel.Service" />
+          <EntitySet Name="Size" EntityType="KingsmanModel.Size" />
+          <EntitySet Name="sysdiagrams" EntityType="KingsmanModel.sysdiagrams" />
+          <EntitySet Name="TypeOfService" EntityType="KingsmanModel.TypeOfService" />
+          <AssociationSet Name="FK__EmplBranc__IdBra__5629CD9C" Association="KingsmanModel.FK__EmplBranc__IdBra__5629CD9C">
+            <End Role="Branch" EntitySet="Branch" />
+            <End Role="EmplBranch" EntitySet="EmplBranch" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Client__IdGender__44FF419A" Association="KingsmanModel.FK__Client__IdGender__44FF419A">
+            <End Role="Gender" EntitySet="Gender" />
+            <End Role="Client" EntitySet="Client" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Order__IdClient__5EBF139D" Association="KingsmanModel.FK__Order__IdClient__5EBF139D">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Client_Size" Association="KingsmanModel.FK_Client_Size">
+            <End Role="Size" EntitySet="Size" />
+            <End Role="Client" EntitySet="Client" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Client_Size1" Association="KingsmanModel.FK_Client_Size1">
+            <End Role="Size" EntitySet="Size" />
+            <End Role="Client" EntitySet="Client" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmplBranc__IdEmp__5535A963" Association="KingsmanModel.FK__EmplBranc__IdEmp__5535A963">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="EmplBranch" EntitySet="EmplBranch" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Employee__IdPosi__52593CB8" Association="KingsmanModel.FK__Employee__IdPosi__52593CB8">
+            <End Role="Position" EntitySet="Position" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Order__IdEmploye__5DCAEF64" Association="KingsmanModel.FK__Order__IdEmploye__5DCAEF64">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderServ__IdOrd__619B8048" Association="KingsmanModel.FK__OrderServ__IdOrd__619B8048">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderService" EntitySet="OrderService" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderServ__IdSer__628FA481" Association="KingsmanModel.FK__OrderServ__IdSer__628FA481">
+            <End Role="Service" EntitySet="Service" />
+            <End Role="OrderService" EntitySet="OrderService" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Service__IdTypeI__5AEE82B9" Association="KingsmanModel.FK__Service__IdTypeI__5AEE82B9">
+            <End Role="TypeOfService" EntitySet="TypeOfService" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -714,139 +444,281 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="Branch">
+          <Key>
+            <PropertyRef Name="IDBranch" />
+          </Key>
+          <Property Name="IDBranch" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="EmplBranch" Relationship="KingsmanModel.FK__EmplBranc__IdBra__5629CD9C" FromRole="Branch" ToRole="EmplBranch" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="IDClient" />
+          </Key>
+          <Property Name="IDClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IdGender" Type="Int32" Nullable="false" />
+          <Property Name="Bithday" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IdTopSIze" Type="Int32" />
+          <Property Name="IdBottomSize" Type="Int32" />
+          <Property Name="BootsSize" Type="Decimal" Precision="3" Scale="1" />
+          <Property Name="Discount" Type="Double" />
+          <NavigationProperty Name="Gender" Relationship="KingsmanModel.FK__Client__IdGender__44FF419A" FromRole="Client" ToRole="Gender" />
+          <NavigationProperty Name="Order" Relationship="KingsmanModel.FK__Order__IdClient__5EBF139D" FromRole="Client" ToRole="Order" />
+          <NavigationProperty Name="Size" Relationship="KingsmanModel.FK_Client_Size" FromRole="Client" ToRole="Size" />
+          <NavigationProperty Name="Size1" Relationship="KingsmanModel.FK_Client_Size1" FromRole="Client" ToRole="Size" />
+        </EntityType>
+        <EntityType Name="EmplBranch">
+          <Key>
+            <PropertyRef Name="IDEmpBranch" />
+          </Key>
+          <Property Name="IDEmpBranch" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEmployeer" Type="Int32" Nullable="false" />
+          <Property Name="IdBranch" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Branch" Relationship="KingsmanModel.FK__EmplBranc__IdBra__5629CD9C" FromRole="EmplBranch" ToRole="Branch" />
+          <NavigationProperty Name="Employee" Relationship="KingsmanModel.FK__EmplBranc__IdEmp__5535A963" FromRole="EmplBranch" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="IDEmployee" />
+          </Key>
+          <Property Name="IDEmployee" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="IdPosition" Type="Int32" Nullable="false" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="EmplBranch" Relationship="KingsmanModel.FK__EmplBranc__IdEmp__5535A963" FromRole="Employee" ToRole="EmplBranch" />
+          <NavigationProperty Name="Position" Relationship="KingsmanModel.FK__Employee__IdPosi__52593CB8" FromRole="Employee" ToRole="Position" />
+          <NavigationProperty Name="Order" Relationship="KingsmanModel.FK__Order__IdEmploye__5DCAEF64" FromRole="Employee" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Gender">
+          <Key>
+            <PropertyRef Name="IDGender" />
+          </Key>
+          <Property Name="IDGender" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Client" Relationship="KingsmanModel.FK__Client__IdGender__44FF419A" FromRole="Gender" ToRole="Client" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="IDOrder" />
+          </Key>
+          <Property Name="IDOrder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEmployee" Type="Int32" Nullable="false" />
+          <Property Name="IdClient" Type="Int32" Nullable="false" />
+          <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Client" Relationship="KingsmanModel.FK__Order__IdClient__5EBF139D" FromRole="Order" ToRole="Client" />
+          <NavigationProperty Name="Employee" Relationship="KingsmanModel.FK__Order__IdEmploye__5DCAEF64" FromRole="Order" ToRole="Employee" />
+          <NavigationProperty Name="OrderService" Relationship="KingsmanModel.FK__OrderServ__IdOrd__619B8048" FromRole="Order" ToRole="OrderService" />
+        </EntityType>
+        <EntityType Name="OrderService">
+          <Key>
+            <PropertyRef Name="IDOrderService" />
+          </Key>
+          <Property Name="IDOrderService" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdOrder" Type="Int32" Nullable="false" />
+          <Property Name="IdService" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="KingsmanModel.FK__OrderServ__IdOrd__619B8048" FromRole="OrderService" ToRole="Order" />
+          <NavigationProperty Name="Service" Relationship="KingsmanModel.FK__OrderServ__IdSer__628FA481" FromRole="OrderService" ToRole="Service" />
+        </EntityType>
+        <EntityType Name="Position">
+          <Key>
+            <PropertyRef Name="IDPosition" />
+          </Key>
+          <Property Name="IDPosition" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Salary" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <NavigationProperty Name="Employee" Relationship="KingsmanModel.FK__Employee__IdPosi__52593CB8" FromRole="Position" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="IDService" />
+          </Key>
+          <Property Name="IDService" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="IdTypeIfService" Type="Int32" Nullable="false" />
+          <Property Name="Discription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="OrderService" Relationship="KingsmanModel.FK__OrderServ__IdSer__628FA481" FromRole="Service" ToRole="OrderService" />
+          <NavigationProperty Name="TypeOfService" Relationship="KingsmanModel.FK__Service__IdTypeI__5AEE82B9" FromRole="Service" ToRole="TypeOfService" />
+        </EntityType>
+        <EntityType Name="Size">
+          <Key>
+            <PropertyRef Name="IDSize" />
+          </Key>
+          <Property Name="IDSize" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Size1" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Discription" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Client" Relationship="KingsmanModel.FK_Client_Size" FromRole="Size" ToRole="Client" />
+          <NavigationProperty Name="Client1" Relationship="KingsmanModel.FK_Client_Size1" FromRole="Size" ToRole="Client" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TypeOfService">
+          <Key>
+            <PropertyRef Name="IDTypeOfService" />
+          </Key>
+          <Property Name="IDTypeOfService" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Service" Relationship="KingsmanModel.FK__Service__IdTypeI__5AEE82B9" FromRole="TypeOfService" ToRole="Service" />
+        </EntityType>
+        <Association Name="FK__EmplBranc__IdBra__5629CD9C">
+          <End Type="KingsmanModel.Branch" Role="Branch" Multiplicity="1" />
+          <End Type="KingsmanModel.EmplBranch" Role="EmplBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branch">
+              <PropertyRef Name="IDBranch" />
+            </Principal>
+            <Dependent Role="EmplBranch">
+              <PropertyRef Name="IdBranch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Client__IdGender__44FF419A">
+          <End Type="KingsmanModel.Gender" Role="Gender" Multiplicity="1" />
+          <End Type="KingsmanModel.Client" Role="Client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gender">
+              <PropertyRef Name="IDGender" />
+            </Principal>
+            <Dependent Role="Client">
+              <PropertyRef Name="IdGender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Order__IdClient__5EBF139D">
+          <End Type="KingsmanModel.Client" Role="Client" Multiplicity="1" />
+          <End Type="KingsmanModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IDClient" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Client_Size">
+          <End Type="KingsmanModel.Size" Role="Size" Multiplicity="0..1" />
+          <End Type="KingsmanModel.Client" Role="Client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Size">
+              <PropertyRef Name="IDSize" />
+            </Principal>
+            <Dependent Role="Client">
+              <PropertyRef Name="IdTopSIze" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Client_Size1">
+          <End Type="KingsmanModel.Size" Role="Size" Multiplicity="0..1" />
+          <End Type="KingsmanModel.Client" Role="Client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Size">
+              <PropertyRef Name="IDSize" />
+            </Principal>
+            <Dependent Role="Client">
+              <PropertyRef Name="IdBottomSize" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmplBranc__IdEmp__5535A963">
+          <End Type="KingsmanModel.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="KingsmanModel.EmplBranch" Role="EmplBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="IDEmployee" />
+            </Principal>
+            <Dependent Role="EmplBranch">
+              <PropertyRef Name="IdEmployeer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Employee__IdPosi__52593CB8">
+          <End Type="KingsmanModel.Position" Role="Position" Multiplicity="1" />
+          <End Type="KingsmanModel.Employee" Role="Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Position">
+              <PropertyRef Name="IDPosition" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="IdPosition" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Order__IdEmploye__5DCAEF64">
+          <End Type="KingsmanModel.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="KingsmanModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="IDEmployee" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="IdEmployee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderServ__IdOrd__619B8048">
+          <End Type="KingsmanModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="KingsmanModel.OrderService" Role="OrderService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="IDOrder" />
+            </Principal>
+            <Dependent Role="OrderService">
+              <PropertyRef Name="IdOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderServ__IdSer__628FA481">
+          <End Type="KingsmanModel.Service" Role="Service" Multiplicity="1" />
+          <End Type="KingsmanModel.OrderService" Role="OrderService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="IDService" />
+            </Principal>
+            <Dependent Role="OrderService">
+              <PropertyRef Name="IdService" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Service__IdTypeI__5AEE82B9">
+          <End Type="KingsmanModel.TypeOfService" Role="TypeOfService" Multiplicity="1" />
+          <End Type="KingsmanModel.Service" Role="Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfService">
+              <PropertyRef Name="IDTypeOfService" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="IdTypeIfService" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="Хранилище KingsmanModelContainer" CdmEntityContainer="Entities">
-          <EntitySetMapping Name="Branch">
-            <EntityTypeMapping TypeName="KingsmanModel.Branch">
-              <MappingFragment StoreEntitySet="Branch">
-                <ScalarProperty Name="IDBranch" ColumnName="IDBranch" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Client">
-            <EntityTypeMapping TypeName="KingsmanModel.Client">
-              <MappingFragment StoreEntitySet="Client">
-                <ScalarProperty Name="IDClient" ColumnName="IDClient" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
-                <ScalarProperty Name="IdGender" ColumnName="IdGender" />
-                <ScalarProperty Name="Bithday" ColumnName="Bithday" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="IdTopSIze" ColumnName="IdTopSIze" />
-                <ScalarProperty Name="IdBottomSize" ColumnName="IdBottomSize" />
-                <ScalarProperty Name="BootsSize" ColumnName="BootsSize" />
-                <ScalarProperty Name="Discount" ColumnName="Discount" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="EmplBranch">
-            <EntityTypeMapping TypeName="KingsmanModel.EmplBranch">
-              <MappingFragment StoreEntitySet="EmplBranch">
-                <ScalarProperty Name="IDEmpBranch" ColumnName="IDEmpBranch" />
-                <ScalarProperty Name="IdEmployeer" ColumnName="IdEmployeer" />
-                <ScalarProperty Name="IdBranch" ColumnName="IdBranch" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Employee">
-            <EntityTypeMapping TypeName="KingsmanModel.Employee">
-              <MappingFragment StoreEntitySet="Employee">
-                <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="IdPosition" ColumnName="IdPosition" />
-                <ScalarProperty Name="Login" ColumnName="Login" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Gender">
-            <EntityTypeMapping TypeName="KingsmanModel.Gender">
-              <MappingFragment StoreEntitySet="Gender">
-                <ScalarProperty Name="IDGender" ColumnName="IDGender" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Order">
-            <EntityTypeMapping TypeName="KingsmanModel.Order">
-              <MappingFragment StoreEntitySet="Order">
-                <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
-                <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
-                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
-                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="OrderService">
-            <EntityTypeMapping TypeName="KingsmanModel.OrderService">
-              <MappingFragment StoreEntitySet="OrderService">
-                <ScalarProperty Name="IDOrderService" ColumnName="IDOrderService" />
-                <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
-                <ScalarProperty Name="IdService" ColumnName="IdService" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Position">
-            <EntityTypeMapping TypeName="KingsmanModel.Position">
-              <MappingFragment StoreEntitySet="Position">
-                <ScalarProperty Name="IDPosition" ColumnName="IDPosition" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Salary" ColumnName="Salary" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Service">
-            <EntityTypeMapping TypeName="KingsmanModel.Service">
-              <MappingFragment StoreEntitySet="Service">
-                <ScalarProperty Name="IDService" ColumnName="IDService" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="IdTypeIfService" ColumnName="IdTypeIfService" />
-                <ScalarProperty Name="Discription" ColumnName="Discription" />
-                <ScalarProperty Name="Photo" ColumnName="Photo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Size">
-            <EntityTypeMapping TypeName="KingsmanModel.Size">
-              <MappingFragment StoreEntitySet="Size">
-                <ScalarProperty Name="IDSize" ColumnName="IDSize" />
-                <ScalarProperty Name="Size1" ColumnName="Size" />
-                <ScalarProperty Name="Discription" ColumnName="Discription" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="KingsmanModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TypeOfService">
-            <EntityTypeMapping TypeName="KingsmanModel.TypeOfService">
-              <MappingFragment StoreEntitySet="TypeOfService">
-                <ScalarProperty Name="IDTypeOfService" ColumnName="IDTypeOfService" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище KingsmanModel.sp_alterdiagram" />
           <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище KingsmanModel.sp_creatediagram" />
           <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище KingsmanModel.sp_dropdiagram" />
@@ -871,6 +743,133 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище KingsmanModel.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище KingsmanModel.sp_upgraddiagrams" />
+          <EntitySetMapping Name="Branch">
+            <EntityTypeMapping TypeName="KingsmanModel.Branch">
+              <MappingFragment StoreEntitySet="Branch">
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="IDBranch" ColumnName="IDBranch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Client">
+            <EntityTypeMapping TypeName="KingsmanModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="BootsSize" ColumnName="BootsSize" />
+                <ScalarProperty Name="IdBottomSize" ColumnName="IdBottomSize" />
+                <ScalarProperty Name="IdTopSIze" ColumnName="IdTopSIze" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Bithday" ColumnName="Bithday" />
+                <ScalarProperty Name="IdGender" ColumnName="IdGender" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="IDClient" ColumnName="IDClient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmplBranch">
+            <EntityTypeMapping TypeName="KingsmanModel.EmplBranch">
+              <MappingFragment StoreEntitySet="EmplBranch">
+                <ScalarProperty Name="IdBranch" ColumnName="IdBranch" />
+                <ScalarProperty Name="IdEmployeer" ColumnName="IdEmployeer" />
+                <ScalarProperty Name="IDEmpBranch" ColumnName="IDEmpBranch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employee">
+            <EntityTypeMapping TypeName="KingsmanModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="IdPosition" ColumnName="IdPosition" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gender">
+            <EntityTypeMapping TypeName="KingsmanModel.Gender">
+              <MappingFragment StoreEntitySet="Gender">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IDGender" ColumnName="IDGender" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order">
+            <EntityTypeMapping TypeName="KingsmanModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderService">
+            <EntityTypeMapping TypeName="KingsmanModel.OrderService">
+              <MappingFragment StoreEntitySet="OrderService">
+                <ScalarProperty Name="IdService" ColumnName="IdService" />
+                <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
+                <ScalarProperty Name="IDOrderService" ColumnName="IDOrderService" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Position">
+            <EntityTypeMapping TypeName="KingsmanModel.Position">
+              <MappingFragment StoreEntitySet="Position">
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="IDPosition" ColumnName="IDPosition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Service">
+            <EntityTypeMapping TypeName="KingsmanModel.Service">
+              <MappingFragment StoreEntitySet="Service">
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Discription" ColumnName="Discription" />
+                <ScalarProperty Name="IdTypeIfService" ColumnName="IdTypeIfService" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="IDService" ColumnName="IDService" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Size">
+            <EntityTypeMapping TypeName="KingsmanModel.Size">
+              <MappingFragment StoreEntitySet="Size">
+                <ScalarProperty Name="Discription" ColumnName="Discription" />
+                <ScalarProperty Name="Size1" ColumnName="Size" />
+                <ScalarProperty Name="IDSize" ColumnName="IDSize" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="KingsmanModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeOfService">
+            <EntityTypeMapping TypeName="KingsmanModel.TypeOfService">
+              <MappingFragment StoreEntitySet="TypeOfService">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="IDTypeOfService" ColumnName="IDTypeOfService" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -5,12 +5,173 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kingsman20.Windows"
         mc:Ignorable="d"
-        Title="ServiceWindow" Height="450" Width="800">
+        Title="ServiceWindow" Height="610" Width="1024" Background="#FFA2CEF9" 
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBlock Text="Вход удачен"
-                       FontSize="28"
-                       FontWeight="Bold"
-                       HorizontalAlignment="Center"
-                       Margin="0,60,0,60" Foreground="Black"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="46"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock  Text="Рязанский пр., 8, Москва, 109428"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="20"
+                    Margin="80 10 0 0"
+                    Height="42" 
+                    Width="367"
+                    Foreground="White">
+            <Image Source="/Res/ServiceImage/ikonki/geo1.png" Height="20" Width="30"  />
+        </TextBlock>
+        <TextBlock  Text="Kingsman"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    FontSize="40"
+                    Margin="148,0,0,3"
+                    FontWeight="Bold" 
+                    Height="53" 
+                    Foreground="White"
+                    Width="231"/>
+        
+        <TextBlock Width="246"
+                   Height="53"
+                   HorizontalAlignment="Right" Margin="0,40,50,5">
+            <TextBlock
+                   VerticalAlignment="Top" 
+                   Height="53" 
+                   Width="70"
+                   Margin="0 0 10 0">
+            <Image Source="/Res/ServiceImage/ikonki/geo1.png" 
+                   Height="30" 
+                   Width="30"
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   Margin="20,0,0,0"/>
+            <LineBreak />
+            <Button x:Name="BtnGeo" 
+                Content="Контакты" 
+                FontSize="15"
+                Height="30"
+                Width="70"
+                Foreground="White"
+                Background="#FFA2CEF9" 
+                BorderBrush="#FFA2CEF9" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Top"/>
+            </TextBlock>
+            <TextBlock
+                   VerticalAlignment="Top" 
+                   Height="53" 
+                   Width="70"
+                Margin="0 0 10 0">
+            <Image Source="/Res/ServiceImage/ikonki/user.png" 
+                   Height="30" 
+                   Width="30"
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Left" 
+                   Margin="20,0,0,0"/>
+            <LineBreak />
+            <Button x:Name="BtnProf" 
+                Content="Профиль" 
+                FontSize="15"
+                Height="30"
+                Width="70"
+                Foreground="White"
+                Background="#FFA2CEF9" 
+                BorderBrush="#FFA2CEF9" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Top"/>
+            </TextBlock>
+            <TextBlock
+                   VerticalAlignment="Top" 
+                   Height="53" 
+                   Width="70">
+            <Image Source="/Res/ServiceImage/ikonki/korz.png" 
+                   Height="30" 
+                   Width="30"
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Left" 
+                   Margin="20,0,0,0"/>
+            <LineBreak />
+            <Button x:Name="BtnKorz" 
+                Content="Корзина" 
+                FontSize="15"
+                Height="30"
+                Width="70"
+                Foreground="White"
+                Background="#FFA2CEF9" 
+                BorderBrush="#FFA2CEF9" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Top"/>
+            </TextBlock>
+        </TextBlock>
+        
+        <ListView x:Name="Name"
+                  Grid.Row="1"
+                  Background="#FFA2CEF9" >
+            <TextBlock Margin="20 0 0 0">
+                <Run FontSize="30" 
+                     Foreground="White" 
+                     FontWeight="Bold">Услуги</Run>
+                <Run FontSize="15" 
+                     Foreground="#808080">5 типа</Run>
+            </TextBlock>
+        </ListView>
+        <ListView x:Name="LvService"
+            Grid.Row="2"
+            Background="#FFA2CEF9"       
+            d:ItemsSource="{d:SampleData ItemCount=5}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="#698fc1"
+                            BorderThickness="2"
+                            Width="200"
+                            Height="300"
+                            Margin="16"
+                            CornerRadius="8">
+                        <StackPanel>
+                            <Image Height="180"
+                                   Width="180" 
+                                   Margin="8"
+                                   Stretch="UniformToFill">
+                                <Image.Source>
+                                    <Binding Path ="Photo">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>/Res/defImg.jpeg</ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                                <Image.Clip>
+                                    <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,180,180"/>
+                                </Image.Clip>
+                            </Image>
+
+                            <TextBlock Text="{Binding Title}"
+                                       FontSize="18"
+                                       Margin="5 3"/>
+                            <TextBlock Text="{Binding Price}"
+                                       FontSize="18"
+                                       Margin="5 3"
+                                       FontFamily="Arial Rounded MT Bold"/>
+                            <TextBlock Text="{Binding Discription}"
+                                       FontSize="13"
+                                       Margin="5 3"
+                                       Foreground="#808080"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </Grid>
 </Window>

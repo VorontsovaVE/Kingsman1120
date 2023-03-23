@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kingsman20.Windows"
         mc:Ignorable="d"
-        Title="AuthWindow" Height="500" Width="400" Background="#698fc1">
+        Title="Authorization" Height="500" Width="400" Background="#698fc1">
     <Grid>
         <StackPanel>
             <StackPanel Height="79" 
                         Width="96"
                         Margin="0 40 0 0"
                         >
-                <Image Source="/image/reg.png" 
+                <Image Source="/Res/AuthImage/reg.png"
                        Height="79" 
                        Width="96"
                        />
@@ -27,25 +27,27 @@
                        HorizontalAlignment="Center"
                        Margin="0 30 0 0" Foreground="#FFFDFDFD"/>
             <TextBox x:Name="TbLogin"
+                     Text="Login"
                      FontSize="18"
                      Width="166"
                      Height="26"
-                     HorizontalAlignment="Center"
                      Margin="0 8 0 0"
                      Background="#FFA1CDF9" 
-                     BorderBrush="#FFA1CDF9"/>
+                     BorderBrush="#FFA1CDF9"
+                     Foreground="#FFC7E2FB"/>
             <TextBlock Text="Password"
                        FontSize="18"
                        HorizontalAlignment="Center"
                        Margin="0 5 0 0" Foreground="#FFFDFDFD"/>
             <PasswordBox x:Name="PbPassword"
-                         FontSize="181"
+                         FontSize="18"
                          Width="166"
                          Height="26"
                          HorizontalAlignment="Center"
                          Margin="0 8 0 0"
                          Background="#FFA1CDF9"
-                         BorderBrush="#FFA1CDF9"/>
+                         BorderBrush="#FFA1CDF9">
+            </PasswordBox>
             <Button x:Name="BtnSIngIn"
                     Content="Log in"
                     FontWeight="Bold"
@@ -55,8 +57,13 @@
                     Height="58"
                     Margin="0 50 0 0" Click="BtnSIngIn_Click" 
                     BorderBrush="#FFA2CEF9" 
-                    Foreground="#FF4472B0"
-                    />
+                    Foreground="#FF4472B0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>

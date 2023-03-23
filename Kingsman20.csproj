@@ -248,10 +248,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
-    <Folder Include="Res\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="image\reg.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBase\BD.Context.tt">
@@ -264,6 +260,13 @@
       <DependentUpon>BD.edmx</DependentUpon>
       <LastGenOutput>BD.cs</LastGenOutput>
     </Content>
+    <Resource Include="Res\ServiceImage\product\miniplat.jpg" />
+    <Resource Include="Res\ServiceImage\ikonki\korz.png" />
+    <Resource Include="Res\ServiceImage\ikonki\user.png" />
+    <Resource Include="Res\ServiceImage\ikonki\geo1.png" />
+    <Resource Include="Res\defImg.jpeg" />
+    <Resource Include="Res\ServiceImage\product\blue.jpg" />
+    <Resource Include="Res\AuthImage\reg.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
