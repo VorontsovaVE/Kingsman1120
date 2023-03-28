@@ -122,39 +122,13 @@
     <Compile Include="DataBase\TypeOfService.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
-    <Compile Include="Windows\HelpWindow.xaml.cs">
-      <DependentUpon>HelpWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\MaterialProdWindow.xaml.cs">
-      <DependentUpon>MaterialProdWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\PortfolioCompWindow.xaml.cs">
-      <DependentUpon>PortfolioCompWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\PricesWindow.xaml.cs">
-      <DependentUpon>PricesWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\ProductWindow.xaml.cs">
-      <DependentUpon>ProductWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\ReviewsWindow.xaml.cs">
-      <DependentUpon>ReviewsWindow.xaml</DependentUpon>
+    <Compile Include="Windows\RegistrationWindow.xaml.cs">
+      <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\ServiceWindow.xaml.cs">
       <DependentUpon>ServiceWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\StocksWindow.xaml.cs">
-      <DependentUpon>StocksWindow.xaml</DependentUpon>
-    </Compile>
     <Page Include="Windows\AuthWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\BasketWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\HelpWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -173,9 +147,6 @@
     <Compile Include="Windows\AuthWindow.xaml.cs">
       <DependentUpon>AuthWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\BasketWindow.xaml.cs">
-      <DependentUpon>BasketWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Windows\InfCopmanWindow.xaml.cs">
       <DependentUpon>InfCopmanWindow.xaml</DependentUpon>
     </Compile>
@@ -183,31 +154,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Windows\MaterialProdWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\PortfolioCompWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\PricesWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\ProductWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\ReviewsWindow.xaml">
+    <Page Include="Windows\RegistrationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ServiceWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\StocksWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

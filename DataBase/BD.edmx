@@ -23,12 +23,14 @@
           <Property Name="Patronymic" Type="nvarchar" MaxLength="50" />
           <Property Name="IdGender" Type="int" Nullable="false" />
           <Property Name="Bithday" Type="date" Nullable="false" />
-          <Property Name="Phone" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
           <Property Name="IdTopSIze" Type="int" />
           <Property Name="IdBottomSize" Type="int" />
           <Property Name="BootsSize" Type="decimal" Precision="3" Scale="1" />
           <Property Name="Discount" Type="float" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Login" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="EmplBranch">
           <Key>
@@ -101,7 +103,7 @@
           </Key>
           <Property Name="IDSize" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Size" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="Discription" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Discription" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -432,7 +434,7 @@
             <End Role="TypeOfService" EntitySet="TypeOfService" />
             <End Role="Service" EntitySet="Service" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
           <Property Type="Binary" Name="definition" Nullable="true" />
@@ -463,12 +465,14 @@
           <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IdGender" Type="Int32" Nullable="false" />
           <Property Name="Bithday" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Phone" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IdTopSIze" Type="Int32" />
           <Property Name="IdBottomSize" Type="Int32" />
           <Property Name="BootsSize" Type="Decimal" Precision="3" Scale="1" />
           <Property Name="Discount" Type="Double" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Gender" Relationship="KingsmanModel.FK__Client__IdGender__44FF419A" FromRole="Client" ToRole="Gender" />
           <NavigationProperty Name="Order" Relationship="KingsmanModel.FK__Order__IdClient__5EBF139D" FromRole="Client" ToRole="Order" />
           <NavigationProperty Name="Size" Relationship="KingsmanModel.FK_Client_Size" FromRole="Client" ToRole="Size" />
@@ -559,7 +563,7 @@
           </Key>
           <Property Name="IDSize" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Size1" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Discription" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Discription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Client" Relationship="KingsmanModel.FK_Client_Size" FromRole="Size" ToRole="Client" />
           <NavigationProperty Name="Client1" Relationship="KingsmanModel.FK_Client_Size1" FromRole="Size" ToRole="Client" />
         </EntityType>
@@ -713,7 +717,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -755,6 +759,8 @@
           <EntitySetMapping Name="Client">
             <EntityTypeMapping TypeName="KingsmanModel.Client">
               <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Discount" ColumnName="Discount" />
                 <ScalarProperty Name="BootsSize" ColumnName="BootsSize" />
                 <ScalarProperty Name="IdBottomSize" ColumnName="IdBottomSize" />
@@ -870,7 +876,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

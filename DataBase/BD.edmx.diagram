@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="a8aea0622b8b47ee90d43271ecf050b9" Name="Diagram1" ZoomLevel="83">
         <EntityTypeShape EntityType="KingsmanModel.Branch" Width="1.5" PointX="3" PointY="15.625" />
-        <EntityTypeShape EntityType="KingsmanModel.Client" Width="1.5" PointX="3" PointY="2.5" />
+        <EntityTypeShape EntityType="KingsmanModel.Client" Width="1.5" PointX="3" PointY="2.25" />
         <EntityTypeShape EntityType="KingsmanModel.EmplBranch" Width="1.5" PointX="5.25" PointY="8.5" />
         <EntityTypeShape EntityType="KingsmanModel.Employee" Width="1.5" PointX="3" PointY="8" />
         <EntityTypeShape EntityType="KingsmanModel.Gender" Width="1.5" PointX="0.75" PointY="0.75" />
@@ -15,7 +15,7 @@
         <EntityTypeShape EntityType="KingsmanModel.Position" Width="1.5" PointX="0.75" PointY="8.625" />
         <EntityTypeShape EntityType="KingsmanModel.Service" Width="1.5" PointX="5.25" PointY="12.25" />
         <EntityTypeShape EntityType="KingsmanModel.Size" Width="1.5" PointX="0.75" PointY="3.5" />
-        <EntityTypeShape EntityType="KingsmanModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="7.25" />
+        <EntityTypeShape EntityType="KingsmanModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="7" />
         <EntityTypeShape EntityType="KingsmanModel.TypeOfService" Width="1.5" PointX="3" PointY="12.75" />
         <AssociationConnector Association="KingsmanModel.FK__EmplBranc__IdBra__5629CD9C" />
         <AssociationConnector Association="KingsmanModel.FK__Client__IdGender__44FF419A" />

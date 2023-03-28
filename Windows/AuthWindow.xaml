@@ -8,16 +8,12 @@
         Title="Authorization" Height="500" Width="400" Background="#698fc1">
     <Grid>
         <StackPanel>
-            <StackPanel Height="79" 
-                        Width="96"
-                        Margin="0 40 0 0"
-                        >
-                <Image Source="/Res/AuthImage/reg.png"
+            <Image Source="/Res/AuthImage/reg.png"
                        Height="79" 
                        Width="96"
+                       Margin="0 40 0 0"
                        />
-            </StackPanel>
-            <TextBlock Text="Authorization"
+                <TextBlock Text="Authorization"
                        FontSize="28"
                        FontWeight="Bold"
                        HorizontalAlignment="Center"
@@ -27,7 +23,6 @@
                        HorizontalAlignment="Center"
                        Margin="0 30 0 0" Foreground="#FFFDFDFD"/>
             <TextBox x:Name="TbLogin"
-                     Text="Login"
                      FontSize="18"
                      Width="166"
                      Height="26"
@@ -65,5 +60,12 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
+        <TextBlock x:Name="BtnReg" 
+                   VerticalAlignment="Top" 
+                   HorizontalAlignment="Center"
+                   Text="Регистрация"
+                   Margin="0,433,0,0"
+                   FontSize="16"
+                   Foreground="White" MouseLeftButtonUp="BtnReg_MouseLeftButtonUp"/>
     </Grid>
 </Window>

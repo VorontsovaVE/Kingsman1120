@@ -29,7 +29,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Bottom"
                     FontSize="40"
-                    Margin="148,0,0,3"
+                    Margin="80,0,0,3"
                     FontWeight="Bold" 
                     Height="53" 
                     Foreground="White"

@@ -1,0 +1,208 @@
+﻿<Window x:Class="Kingsman20.Windows.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kingsman20.Windows"
+        mc:Ignorable="d"
+        Title="RegistrationWindow" Height="600" Width="450" Background="#698fc1">
+    <Grid>
+        <StackPanel  Width="225"
+                     HorizontalAlignment="Left">
+            <TextBlock Margin="0,0,0,0" Width="197">
+                <Image Source="/Res/AuthImage/reg.png"
+                   Height="49" 
+                   Width="51"
+                   HorizontalAlignment="Left"
+                   Margin="5 10 0 0"
+                       />
+            <TextBlock Text="Authorization"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Left"
+                       Margin="0,-15,0,0" 
+                       Foreground="White" Height="30" Width="139"/>
+            </TextBlock>
+            <TextBlock Text="Login"
+                       FontSize="18"
+                       HorizontalAlignment="Left"
+                       Margin="40 11 0 0" 
+                       Foreground="#FFFDFDFD"/>
+            <TextBox x:Name="TbLogin"
+                     FontSize="18"
+                     Width="166"
+                     Height="26"
+                     Margin="20 8 0 0"
+                     Background="#FFA1CDF9" 
+                     BorderBrush="#FFA1CDF9"
+                     Foreground="#FFC7E2FB"/>
+            <TextBlock Text="Password"
+                       FontSize="18"
+                       HorizontalAlignment="Left"
+                       Margin="40 2 0 0" Foreground="#FFFDFDFD"/>
+            <PasswordBox x:Name="PbPassword"
+                         FontSize="18"
+                         Width="166"
+                         Height="26"
+                         HorizontalAlignment="Center"
+                         Margin="20 8 0 0"
+                         Background="#FFA1CDF9"
+                         BorderBrush="#FFA1CDF9">
+            </PasswordBox>
+            <TextBlock Text="LastName"
+                       FontSize="18"
+                       HorizontalAlignment="Left"
+                       Margin="40 2 0 0" Foreground="#FFFDFDFD"/>
+            <TextBox x:Name="TbLastName"
+                     FontSize="18"
+                     Width="166"
+                     Height="26"
+                     Margin="20 8 0 0"
+                     Background="#FFA1CDF9" 
+                     BorderBrush="#FFA1CDF9"
+                     Foreground="#FFC7E2FB"/>
+            <TextBlock Text="FirstName"
+                       FontSize="18"
+                       HorizontalAlignment="Left"
+                       Margin="40 2 0 0" Foreground="#FFFDFDFD"/>
+            <TextBox x:Name="TbFirstName"
+                         FontSize="18"
+                         Width="166"
+                         Height="26"
+                         HorizontalAlignment="Center"
+                         Margin="20 8 0 0"
+                         Background="#FFA1CDF9"
+                         BorderBrush="#FFA1CDF9">
+            </TextBox>
+            <TextBlock Text="MiddleName*"
+                       FontSize="18"
+                       HorizontalAlignment="Left"
+                       Margin="40 2 0 0" Foreground="#FFFDFDFD"/>
+            <TextBox x:Name="TbMiddleName"
+                     FontSize="18"
+                     Width="166"
+                     Height="26"
+                     Margin="20 8 0 0"
+                     Background="#FFA1CDF9" 
+                     BorderBrush="#FFA1CDF9"
+                     Foreground="#FFC7E2FB"/>
+            <TextBlock Text="Bithday"
+                       FontSize="18"
+                       HorizontalAlignment="Left"
+                       Margin="40 2 0 0" Foreground="#FFFDFDFD"/>
+            <DatePicker x:Name="TbBithday"
+                     FontSize="18"
+                     Width="166"
+                     Height="26"
+                     Margin="20 8 0 0"
+                     Background="#FFA1CDF9" 
+                     BorderBrush="#FFA1CDF9"
+                     Foreground="#FFC7E2FB"/>
+        </StackPanel>
+        <StackPanel Width="225"
+                     HorizontalAlignment="Right">
+            <TextBlock Text="Gender"
+                       FontSize="18"
+                       HorizontalAlignment="Left"
+                       Margin="20 70 0 0" Foreground="#FFFDFDFD"/>
+            <ComboBox x:Name="CmbGender"
+                     FontSize="18"
+                     Width="166"
+                     Height="26"
+                     Margin="-20 8 0 0"
+                     Background="#FFA1CDF9" 
+                     BorderBrush="#FFA1CDF9"
+                     Foreground="#FFC7E2FB"/>
+            <TextBlock Text="Phone"
+                       FontSize="18"
+                       HorizontalAlignment="Left"
+                       Margin="20 2 0 0" Foreground="#FFFDFDFD"/>
+            <TextBox x:Name="TbPhone"
+                     FontSize="18"
+                     Width="166"
+                     Height="26"
+                     Margin="-20 8 0 0"
+                     Background="#FFA1CDF9" 
+                     BorderBrush="#FFA1CDF9"
+                     Foreground="#FFC7E2FB"/>
+            <TextBlock Text="E-mail*"
+                       FontSize="18"
+                       HorizontalAlignment="Left"
+                       Margin="20 2 0 0" Foreground="#FFFDFDFD"/>
+            <TextBox x:Name="TbEmail"
+                     FontSize="18"
+                     Width="166"
+                     Height="26"
+                     Margin="-20 8 0 0"
+                     Background="#FFA1CDF9" 
+                     BorderBrush="#FFA1CDF9"
+                     Foreground="#FFC7E2FB"/>
+            <TextBlock Text="Размер верха*"
+                       FontSize="18"
+                       HorizontalAlignment="Left"
+                       Margin="20 2 0 0" Foreground="#FFFDFDFD"/>
+            <ComboBox x:Name="TbTopSize"
+                     FontSize="18"
+                     Width="166"
+                     Height="26"
+                     Margin="-20 8 0 0"
+                     Background="#FFA1CDF9" 
+                     BorderBrush="#FFA1CDF9"
+                     Foreground="#FFC7E2FB"/>
+            <TextBlock Text="Размер низа*"
+                       FontSize="18"
+                       HorizontalAlignment="Left"
+                       Margin="20 2 0 0" Foreground="#FFFDFDFD"/>
+            <ComboBox x:Name="TbBottomSize"
+                     FontSize="18"
+                     Width="166"
+                     Height="26"
+                     Margin="-20 8 0 0"
+                     Background="#FFA1CDF9" 
+                     BorderBrush="#FFA1CDF9"
+                     Foreground="#FFC7E2FB"/>
+            <TextBlock Text="Размер обуви(RUS)*"
+                       FontSize="18"
+                       HorizontalAlignment="Left"
+                       Margin="20 2 0 0" Foreground="#FFFDFDFD"/>
+            <TextBox x:Name="TbBootsSize"
+                     FontSize="18"
+                     Width="166"
+                     Height="26"
+                     Margin="-20 8 0 0"
+                     Background="#FFA1CDF9" 
+                     BorderBrush="#FFA1CDF9"
+                     Foreground="#FFC7E2FB"/>
+        </StackPanel>
+        <Button x:Name="BtnReg"
+                Content="Registration"
+                FontWeight="Bold"
+                FontSize="18"
+                Width="200"
+                Height="60"
+                Margin="125,451,125,45" 
+                Click="BtnReg_Click" 
+                BorderBrush="#FFA2CEF9"
+                Background="#a2cef9" 
+                Foreground="#FF4472B0">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="16"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock x:Name="BtnAuth" 
+                   VerticalAlignment="Top" 
+                   HorizontalAlignment="Center"
+                   Text="Вернуться назад"
+                   Margin="0,524,0,0"
+                   FontSize="16"
+                   Foreground="White" 
+                   MouseLeftButtonUp="BtnAuth_MouseLeftButtonUp"/>
+        <TextBlock Text="* - необязательно к заполению"
+                   VerticalAlignment="Bottom"
+                   FontSize="13"
+                   Foreground="White"/>
+
+    </Grid>
+</Window>
