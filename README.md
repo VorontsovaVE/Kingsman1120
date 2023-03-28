@@ -22,3 +22,6 @@
 
 ![image](https://user-images.githubusercontent.com/126570601/225842601-826e6427-84b2-46aa-88a9-0c93d5de36b5.png)
 
+<b>Меню сервиса</b>
+
+![image](https://user-images.githubusercontent.com/126570601/228207775-eb5a87bf-281a-487b-abdb-0fe29ea4f6c6.png)
