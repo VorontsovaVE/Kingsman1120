@@ -24,6 +24,8 @@
 
 <b>Меню сервиса</b>
 
-![image](https://user-images.githubusercontent.com/126570601/228207775-eb5a87bf-281a-487b-abdb-0fe29ea4f6c6.png)
+![image](https://user-images.githubusercontent.com/126570601/228219968-4129f797-5ea4-43b8-8bc5-84d98603e8e2.png)
 
 <b>Меню регистрации</b>
+
+![image](https://user-images.githubusercontent.com/126570601/228220025-fe02edba-c079-4f37-abe9-be0c866b7f3e.png)
