@@ -26,6 +26,14 @@
 
 ![image](https://user-images.githubusercontent.com/126570601/228219968-4129f797-5ea4-43b8-8bc5-84d98603e8e2.png)
 
-<b>Меню регистрации</b>
+<b>Окно регистрации </b>
 
-![image](https://user-images.githubusercontent.com/126570601/228220025-fe02edba-c079-4f37-abe9-be0c866b7f3e.png)
+![image](https://user-images.githubusercontent.com/126571078/230600672-8d23b10d-9610-452c-a9d9-eed80d579092.png)
+
+<b>Окно добавления услуги </b>
+
+![image](https://user-images.githubusercontent.com/126571078/230600891-93720aa4-a345-43d8-bbed-0f466d220a11.png)
+
+<b>Удачное добавление услуги </b>
+
+![image](https://user-images.githubusercontent.com/126571078/230600974-5f73f89b-0a30-46e5-8f9e-a5cd5028c8c2.png)
