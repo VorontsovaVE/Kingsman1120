@@ -28,7 +28,7 @@
 
 <b>Окно регистрации </b>
 
-![image](https://user-images.githubusercontent.com/126571078/230600672-8d23b10d-9610-452c-a9d9-eed80d579092.png)
+![image](https://user-images.githubusercontent.com/126571078/230903645-29593219-9ae2-4d60-9d84-cf49fc68170c.png)
 
 <b>Окно добавления услуги </b>
 
@@ -37,3 +37,17 @@
 <b>Удачное добавление услуги </b>
 
 ![image](https://user-images.githubusercontent.com/126571078/230600974-5f73f89b-0a30-46e5-8f9e-a5cd5028c8c2.png)
+
+<b>Окно редактирования услуги</b>
+
+![image](https://user-images.githubusercontent.com/126571078/230908624-a49c5d94-3dcb-406a-8436-9e465762d75f.png)
+
+<b>Успешное изменение</b>
+
+![image](https://user-images.githubusercontent.com/126571078/230908987-12e9dd72-4573-4f67-a6b0-0ce5e8a0b92c.png)
+
+<b>Главное меню</b>
+
+![image](https://user-images.githubusercontent.com/126571078/230913758-bd9dc4cd-642f-4bf7-bade-e89196a4103b.png)
+
+
