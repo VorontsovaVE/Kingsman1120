@@ -25,8 +25,17 @@ namespace Kingsman20.Windows
             InitializeComponent();
 
             CmbGender.ItemsSource = ClassHelper.EF.Context.Gender.ToList();
-            CmbGender.DisplayMemberPath = "Gender";
+            CmbGender.DisplayMemberPath = "Name";
             CmbGender.SelectedIndex = 0;
+
+
+            TbTopSize.ItemsSource = ClassHelper.EF.Context.Size.ToList();
+            TbTopSize.DisplayMemberPath = "Size1";
+            TbTopSize.SelectedIndex = 0;
+
+            TbBottomSize.ItemsSource = ClassHelper.EF.Context.Size.ToList();
+            TbBottomSize.DisplayMemberPath = "Size1";
+            TbBottomSize.SelectedIndex = 0;
         }
         private void BtnReg_Click(object sender, RoutedEventArgs e)
         {

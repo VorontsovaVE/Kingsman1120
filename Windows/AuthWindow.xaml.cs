@@ -33,9 +33,9 @@ namespace Kingsman20.Windows
                 FirstOrDefault();
             if (userAuth != null)
             {
-                //cписок услуг
-                ServiceWindow serviceWindow1 = new ServiceWindow();
-                serviceWindow1.Show();
+                //cписок меню
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
                 this.Close();
             }
             else

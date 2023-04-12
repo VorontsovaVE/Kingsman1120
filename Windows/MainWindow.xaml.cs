@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Kingsman20.Windows.Main;
+using Kingsman20.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,27 @@ namespace Kingsman20
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnClient_Click(object sender, RoutedEventArgs e)
+        {
+            ClientInfWindow clientInfWindow = new ClientInfWindow();
+            clientInfWindow.Show();
+            this.Close();
+        }
+
+        private void BtnEmployees_Click(object sender, RoutedEventArgs e)
+        {
+            EmployeesInfWindow employeesInfWindow = new EmployeesInfWindow();
+            employeesInfWindow.Show();
+            this.Close();
+        }
+
+        private void BtnService_Click(object sender, RoutedEventArgs e)
+        {
+            ServiceWindow serviceWindow = new ServiceWindow();
+            serviceWindow.Show();
+            this.Close();
         }
     }
 }

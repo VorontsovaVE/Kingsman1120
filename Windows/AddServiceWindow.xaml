@@ -1,0 +1,96 @@
+﻿<Window x:Class="Kingsman20.Windows.AddServiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kingsman20.Windows"
+        mc:Ignorable="d"
+        Title="AddServiceWindow" Height="541" Width="600" Background="#698fc1" 
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Width="250">
+            <TextBlock Margin="0,0,0,0" Width="197">
+
+                <Image Source="/Res/AuthImage/reg.png"
+                   Height="49" 
+                   Width="51"
+                   HorizontalAlignment="Left"
+                   Margin="5 10 0 0"
+                       />
+            <TextBlock Text="Add Service"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Left"
+                       Margin="0,-15,0,0" 
+                       Foreground="White" Height="30" Width="139"/>
+            </TextBlock>
+            <Border BorderBrush="Gray"
+                    Margin="40 70 0 0"
+                    Width="200"
+                    Height="200"
+                    BorderThickness="1">
+                <Image x:Name="ImgImageService"/>
+            </Border>
+            <Button x:Name="BtnChooseImage" 
+                    Content="Выбрать изображение"
+                    FontSize="16"                    
+                    Width="200"
+                    Height="40"
+                    Margin="40 40 0 0"
+                    Click="BtnChooseImage_Click"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" Width="350" >
+
+            <TextBlock Text="Введите наименование услуги"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 80 0 0"/>
+            <TextBox x:Name="TbNameService"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+
+            <TextBlock Text="Введите описание услуги"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <TextBox x:Name="TbDiscService"
+                         FontSize="18"                    
+                         Width="200"
+                         Height="30"
+                         Margin="0 8 0 0"/>
+
+            <TextBlock Text="Введите цена услуги"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <TextBox x:Name="TbPriceService"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+
+
+
+            <TextBlock Text="Выберите тип услуги"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <ComboBox x:Name="CmbTypeService"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+
+            <Button x:Name="BtnAddService" 
+                    Content="Добавить"
+                    FontSize="18"                    
+                    Width="150"
+                    Height="40"
+                    Margin="0 40 0 0"
+                    Click="BtnAddService_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

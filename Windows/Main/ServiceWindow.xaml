@@ -134,7 +134,7 @@
                     <Border BorderBrush="#698fc1"
                             BorderThickness="2"
                             Width="200"
-                            Height="300"
+                            Height="340"
                             Margin="16"
                             CornerRadius="8">
                         <StackPanel>
@@ -166,12 +166,31 @@
                                        Margin="5 3"
                                        Foreground="#808080"
                                        TextWrapping="Wrap"/>
+                            <Button x:Name="BtnEdit"
+                                    Width="40"
+                                    Height="40"
+                                    HorizontalAlignment="Right"
+                                    Margin="0 0 10 0"
+                                    Background="{x:Null}"
+                                    BorderThickness="0"
+                                    Click="BtnEdit_Click">
+                                <Image Source="/Res/ServiceImage/ikonki/edit.png"/>
+                            </Button>
                         </StackPanel>
-
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
+        <Button x:Name="BtnAddService"
+                Grid.Row="3"
+                Width="40"
+                Height="40"
+                Background="{x:Null}"
+                BorderThickness="0"
+                HorizontalAlignment="Right"
+                Margin="0 0 65 0"
+                Click="BtnAddService_Click">
+            <Image Source="/Res/ServiceImage/ikonki/add.png"/>
+        </Button>
     </Grid>
 </Window>

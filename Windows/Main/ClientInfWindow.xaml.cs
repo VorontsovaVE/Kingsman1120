@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Kingsman20.Windows
+namespace Kingsman20.Windows.Main
 {
     /// <summary>
-    /// Логика взаимодействия для ServiceWindow.xaml
+    /// Логика взаимодействия для ClientInfWindow.xaml
     /// </summary>
-    public partial class ServiceWindow : Window
+    public partial class ClientInfWindow : Window
     {
-        public ServiceWindow()
+        public ClientInfWindow()
         {
             InitializeComponent();
-            GetListService();
-        }
-        private void GetListService()
-        {
-            LvService.ItemsSource = ClassHelper.EF.Context.Service.ToList();
         }
     }
 }

@@ -16,7 +16,7 @@
                    HorizontalAlignment="Left"
                    Margin="5 10 0 0"
                        />
-            <TextBlock Text="Authorization"
+            <TextBlock Text="Registration"
                        FontSize="20"
                        FontWeight="Bold"
                        HorizontalAlignment="Left"
@@ -180,7 +180,7 @@
                 FontSize="18"
                 Width="200"
                 Height="60"
-                Margin="125,451,125,45" 
+                Margin="0,400,0,0" 
                 Click="BtnReg_Click" 
                 BorderBrush="#FFA2CEF9"
                 Background="#a2cef9" 
