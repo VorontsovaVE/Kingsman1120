@@ -49,7 +49,7 @@
                          Background="#FFA1CDF9"
                          BorderBrush="#FFA1CDF9">
             </PasswordBox>
-            <TextBlock Text="LastName"
+            <TextBlock Text="Фамилия"
                        FontSize="18"
                        HorizontalAlignment="Left"
                        Margin="40 2 0 0" Foreground="#FFFDFDFD"/>
@@ -61,7 +61,7 @@
                      Background="#FFA1CDF9" 
                      BorderBrush="#FFA1CDF9"
                      Foreground="#FFC7E2FB"/>
-            <TextBlock Text="FirstName"
+            <TextBlock Text="Имя"
                        FontSize="18"
                        HorizontalAlignment="Left"
                        Margin="40 2 0 0" Foreground="#FFFDFDFD"/>
@@ -74,7 +74,7 @@
                          Background="#FFA1CDF9"
                          BorderBrush="#FFA1CDF9">
             </TextBox>
-            <TextBlock Text="MiddleName*"
+            <TextBlock Text="Отчество*"
                        FontSize="18"
                        HorizontalAlignment="Left"
                        Margin="40 2 0 0" Foreground="#FFFDFDFD"/>
@@ -86,7 +86,7 @@
                      Background="#FFA1CDF9" 
                      BorderBrush="#FFA1CDF9"
                      Foreground="#FFC7E2FB"/>
-            <TextBlock Text="Bithday"
+            <TextBlock Text="Дата рождения"
                        FontSize="18"
                        HorizontalAlignment="Left"
                        Margin="40 2 0 0" Foreground="#FFFDFDFD"/>
@@ -101,7 +101,7 @@
         </StackPanel>
         <StackPanel Width="225"
                      HorizontalAlignment="Right">
-            <TextBlock Text="Gender"
+            <TextBlock Text="Выберите пол"
                        FontSize="18"
                        HorizontalAlignment="Left"
                        Margin="20 70 0 0" Foreground="#FFFDFDFD"/>
@@ -113,7 +113,7 @@
                      Background="#FFA1CDF9" 
                      BorderBrush="#FFA1CDF9"
                      Foreground="#FFC7E2FB"/>
-            <TextBlock Text="Phone"
+            <TextBlock Text="Номер телефона"
                        FontSize="18"
                        HorizontalAlignment="Left"
                        Margin="20 2 0 0" Foreground="#FFFDFDFD"/>
