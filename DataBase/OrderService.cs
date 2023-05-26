@@ -17,6 +17,7 @@ namespace Kingsman20.DataBase
         public int IDOrderService { get; set; }
         public int IdOrder { get; set; }
         public int IdService { get; set; }
+        public int Quantity { get; set; }
     
         public virtual Order Order { get; set; }
         public virtual Service Service { get; set; }

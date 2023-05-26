@@ -1,11 +1,12 @@
-﻿<Window x:Class="Kingsman20.Windows.ServiceWindow"
+﻿<Window x:Class="Kingsman20.Windows.CartWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kingsman20.Windows"
         mc:Ignorable="d"
-        Title="ServiceWindow" Height="610" Width="1024" Background="#FFA2CEF9" 
+        Title="CartWindow" Height="585" Width="800"
+        Background="#FFA2CEF9" 
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
@@ -23,6 +24,7 @@
                     Height="42" 
                     Width="367"
                     Foreground="White">
+
             <Image Source="/Res/ServiceImage/ikonki/geo1.png" Height="20" Width="30"  />
         </TextBlock>
         <TextBlock  Text="Kingsman"
@@ -89,6 +91,7 @@
                    VerticalAlignment="Top" 
                    Height="53" 
                    Width="70">
+
             <Image Source="/Res/ServiceImage/ikonki/korz.png" 
                    Height="30" 
                    Width="30"
@@ -105,25 +108,32 @@
                 Background="#FFA2CEF9" 
                 BorderBrush="#FFA2CEF9" 
                 HorizontalAlignment="Center" 
-                VerticalAlignment="Top" Click="BtnKorz_Click"/>
+                VerticalAlignment="Top"/>
             </TextBlock>
         </TextBlock>
-
-        <ListView x:Name="Name"
-                  Grid.Row="1"
-                  Background="#FFA2CEF9">
-            <TextBlock Margin="20 0 0 0">
+        <TextBlock Margin="20 0 0 0"
+                       Grid.Row="1">
                 <Run FontSize="30" 
                      Foreground="White" 
-                     FontWeight="Bold">Услуги</Run>
-                <Run FontSize="15" 
-                     Foreground="#808080">5 типа</Run>
-            </TextBlock>
-        </ListView>
-        <ListView x:Name="LvService"
+                     FontWeight="Bold">Корзина</Run>
+        </TextBlock>
+        <Button x:Name="BtnPay"
+                Grid.Row="1"
+                Content="Оформить заказ"
+                HorizontalAlignment="Right"
+                FontSize="18"
+                Height="38"
+                Width="147"
+                FontWeight="Bold"
+                Margin="0 0 20 0"
+                BorderThickness="0 0 0 0"
+                Foreground="White"
+                Background="#FFA2CEF9" Click="BtnPay_Click"
+                />
+        <ListView x:Name="LvCartService"
             Grid.Row="2"
             Background="#FFA2CEF9"   
-            BorderThickness="0"      
+            BorderThickness="0"     
             d:ItemsSource="{d:SampleData ItemCount=6}"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.ItemsPanel>
@@ -168,44 +178,60 @@
                                        Margin="5 3"
                                        Foreground="#808080"
                                        TextWrapping="Wrap"/>
-                            <WrapPanel HorizontalAlignment="Center"
-                                       Margin="0 10 0 0">
-                                <Button x:Name="BtnEdit"
-                                    Width="40"
-                                    Height="40"
-                                    HorizontalAlignment="Left"
-                                    Margin="0 0 0 0"
-                                    Background="{x:Null}"
-                                    BorderThickness="0"
-                                    Click="BtnEdit_Click">
-                                    <Image Source="/Res/ServiceImage/ikonki/edit.png" />
+                            <TextBlock Margin="0 10 20 0"
+                                       HorizontalAlignment="Right">
+                                <Button x:Name="BtnAdd"
+                                        Click="BtnAdd_Click"
+                                    Height="30"
+                                       Width="30">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="7"/>
+                                        </Style>
+                                </Button.Resources>
+                                <Image Source="/Res/ServiceImage/ikonki/minus.png" 
+                                       Height="20"
+                                       Width="20"/>
                                 </Button>
-                                <Button x:Name="BtnCart"
-                                    Width="40"
-                                    Height="40"
-                                    HorizontalAlignment="Right"
-                                    Margin="90 0 0 0"
-                                    Background="{x:Null}"
-                                    BorderThickness="0"
-                                    Click="BtnCart_Click">
-                                    <Image Source="/Res/ServiceImage/ikonki/korz.png" />
+                                <TextBox x:Name="TbCartQuant"
+                                    Height="30"
+                                    Width="30"
+                                    FontSize="18" 
+                                    HorizontalAlignment="Center" 
+                                    HorizontalContentAlignment="Center"
+                                         Text="{Binding Count}"/>
+                                <Button x:Name="BtnDelet"
+                                        Click="BtnDelet_Click"
+                                        Height="30"
+                                        Width="30">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="7"/>
+                                        </Style>
+                                    </Button.Resources>
+                                    <Image Source="/Res/ServiceImage/ikonki/add.png" 
+                                        Height="22"
+                                        Width="22" />
                                 </Button>
-                            </WrapPanel>
+                            </TextBlock>
                         </StackPanel>
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="BtnAddService"
+        <Button x:Name="BtnExit"
                 Grid.Row="3"
-                Width="40"
-                Height="40"
-                Background="{x:Null}"
-                BorderThickness="0"
+                Content="Вернуться назад"
+                FontSize="18"
                 HorizontalAlignment="Right"
-                Margin="0 0 65 0"
-                Click="BtnAddService_Click">
-            <Image Source="/Res/ServiceImage/ikonki/add.png" />
-        </Button>
+                Height="40"
+                Width="150"
+                FontWeight="Bold"
+                VerticalAlignment="Top"
+                Margin="0 5 20 0"
+                BorderThickness="0 0 0 0"
+                Foreground="White"
+                Background="#FFA2CEF9"
+                Click="BtnExit_Click"/>
     </Grid>
 </Window>

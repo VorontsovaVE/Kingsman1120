@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kingsman20.ClassHelper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,6 +53,26 @@ namespace Kingsman20.Windows
             editServiceWindow.ShowDialog();
 
             GetListService();
+        }
+        private void BtnCart_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            var service = button.DataContext as DataBase.Service; // получаем выбранную запись
+
+            service.Count++;
+            CartServiceClass.ServiceCart.Add(service);
+
+            MessageBox.Show($"Услуга {service.Title} добавлена в корзину!");
+        }
+        private void BtnKorz_Click(object sender, RoutedEventArgs e)
+        {
+            CartWindow cartWindow = new CartWindow();
+            cartWindow.ShowDialog();
+            this.Close();
         }
     }
 }
