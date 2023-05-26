@@ -58,9 +58,14 @@
 
 <b>Добавление в корзину</b>
 
-![image](https://user-images.githubusercontent.com/126571078/234261906-aa28e57a-8219-4d62-97c7-8453699814a6.png)
+!image (https://github.com/FliurtsaUl/Kingsman20/assets/126571078/84036994-db29-4aa1-8ad6-535a60eb9465)
 
-![image](https://user-images.githubusercontent.com/126571078/234262362-a1124689-2e13-4585-a6de-039515237f19.png)
+!image (https://github.com/FliurtsaUl/Kingsman20/assets/126571078/11e1b8db-8569-4b95-9413-2879f8ae1ceb)
 
-![image](https://user-images.githubusercontent.com/126571078/234262423-03059b46-e373-4076-9d9a-b296e49d5436.png)
+!image (https://github.com/FliurtsaUl/Kingsman20/assets/126571078/56cbfa43-99bf-4b02-a8d7-53519cf67f4e)
 
+<b>Добавление Сотрудника </b>
+
+!image (https://github.com/FliurtsaUl/Kingsman20/assets/126571078/7ec4f328-88e1-4738-bec4-05b19ec857e7)
+
+!image (https://github.com/FliurtsaUl/Kingsman20/assets/126571078/4bd5026a-b8d1-4191-be30-c546a813b345)
