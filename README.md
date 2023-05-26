@@ -58,14 +58,14 @@
 
 <b>Добавление в корзину</b>
 
-!image (https://github.com/FliurtsaUl/Kingsman20/assets/126571078/84036994-db29-4aa1-8ad6-535a60eb9465)
+![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/d37b7bda-b73f-4907-9914-5e5c9e477613)
 
-!image (https://github.com/FliurtsaUl/Kingsman20/assets/126571078/11e1b8db-8569-4b95-9413-2879f8ae1ceb)
+![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/2f119896-0762-479b-9593-5a627bd532b8)
 
-!image (https://github.com/FliurtsaUl/Kingsman20/assets/126571078/56cbfa43-99bf-4b02-a8d7-53519cf67f4e)
+![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/7a2f3d4e-0841-4888-bfb7-8afd26d19824)
 
 <b>Добавление Сотрудника </b>
 
-!image (https://github.com/FliurtsaUl/Kingsman20/assets/126571078/7ec4f328-88e1-4738-bec4-05b19ec857e7)
+![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/6f4c7e27-5dbd-4a5b-b2ab-41789747024d)
 
-!image (https://github.com/FliurtsaUl/Kingsman20/assets/126571078/4bd5026a-b8d1-4191-be30-c546a813b345)
+![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/a397cac8-e91d-44e6-ac9d-cabcf20687bb)
