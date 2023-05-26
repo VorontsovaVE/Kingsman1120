@@ -5,8 +5,102 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kingsman20.Windows.Add"
         mc:Ignorable="d"
-        Title="AddEmployeeWindow" Height="450" Width="800">
+        Title="AddEmployeeWindow"  Height="541" Width="600" Background="#698fc1" 
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Left" Width="300">
+            <TextBlock Margin="0,0,0,0" Width="197">
+
+                <Image Source="/Res/AuthImage/reg.png"
+                   Height="49" 
+                   Width="51"
+                   HorizontalAlignment="Left"
+                   Margin="5 10 0 0"
+                       />
+            <TextBlock Text="Add Service"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Left"
+                       Margin="0,-15,0,0" 
+                       Foreground="White" Height="30" Width="139"/>
+            </TextBlock>
+            <TextBlock Text="Введите Фамилию"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 21 0 0"/>
+            <TextBox x:Name="TbLNameEmp"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+            <TextBlock Text="Введите Имя"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <TextBox x:Name="TbFNameEmp"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+            <TextBlock Text="Введите Отчество*"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <TextBox x:Name="TbPathEmp"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+            <TextBlock Text="Введите номер телефона"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <TextBox x:Name="TbPhoneEmp"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" Width="300" >
+
+            <TextBlock Text="Выберите Должность"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 80 0 0"/>
+            <ComboBox x:Name="CmbPositEmp"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+
+            <TextBlock Text="Введите Логин"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <TextBox x:Name="TbLoginEmp"
+                         FontSize="18"                    
+                         Width="200"
+                         Height="30"
+                         Margin="0 8 0 0"/>
+
+            <TextBlock Text="Введите Пароль"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <TextBox x:Name="TbPasswordEmp"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+
+            <Button x:Name="BtnAddEmployee" 
+                    Content="Добавить"
+                    FontSize="18"                    
+                    Width="150"
+                    Height="40"
+                    Margin="0 150 0 0"
+                    Click="BtnAddEmployee_Click"/>
+        </StackPanel>
+
     </Grid>
 </Window>
