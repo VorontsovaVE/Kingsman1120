@@ -64,8 +64,11 @@
 
 ![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/7a2f3d4e-0841-4888-bfb7-8afd26d19824)
 
-<b>Добавление Сотрудника </b>
+<b>Добавление Сотрудника/Клиента </b>
 
 ![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/6f4c7e27-5dbd-4a5b-b2ab-41789747024d)
 
 ![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/a397cac8-e91d-44e6-ac9d-cabcf20687bb)
+
+![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/5c8b4e3b-9442-40e9-94f5-33b2b363b36c)
+
