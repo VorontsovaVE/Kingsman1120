@@ -48,7 +48,7 @@
 
 <b>Главное меню</b>
 
-![image](https://user-images.githubusercontent.com/126571078/230913758-bd9dc4cd-642f-4bf7-bade-e89196a4103b.png)
+![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/2d95e350-12f8-4ed0-81a9-2ecac289cb31)
 
 <b>Список Сотрудников/Клиентов</b>
 
@@ -72,3 +72,6 @@
 
 ![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/5c8b4e3b-9442-40e9-94f5-33b2b363b36c)
 
+<b>Отчет</b>
+
+![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/73ffaa0d-b8df-4b05-b852-beb8817d161c)
