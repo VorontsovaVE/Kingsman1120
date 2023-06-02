@@ -79,7 +79,7 @@ namespace Kingsman20.Windows
                     DataBase.OrderService newOrderService = new DataBase.OrderService();
                     newOrderService.IdOrder = newOrder.IDOrder;
                     newOrderService.IdService = item.IDService;
-                    newOrderService.Quantity = item.Count;
+                    newOrderService.Quantity = item.Quantity;
 
                     ClassHelper.EF.Context.OrderService.Add(newOrderService);
                     ClassHelper.EF.Context.SaveChanges();
@@ -104,9 +104,9 @@ namespace Kingsman20.Windows
             }
             var service = button.DataContext as DataBase.Service;
 
-            if (service.Count > 1)
+            if (service.Quantity > 1)
             {
-                service.Count--;
+                service.Quantity--;
             }
 
             SetListServise();
@@ -121,9 +121,9 @@ namespace Kingsman20.Windows
             }
             var service = button.DataContext as DataBase.Service;
 
-            if (service.Count < 10)
+            if (service.Quantity < 10)
             {
-                service.Count++;
+                service.Quantity++;
             }
 
             SetListServise();

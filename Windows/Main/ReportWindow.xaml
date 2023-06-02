@@ -1,0 +1,56 @@
+﻿<Window x:Class="Kingsman20.Windows.ReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kingsman20.Windows"
+        mc:Ignorable="d"
+        Title="ReportWindow" Height="550" Width="800"
+        Background="#FFA2CEF9" 
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Text="Отчет"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Height="40"
+                Width="150"
+                       Margin="20,15,0,0" Foreground="White"/>
+        <Button x:Name="BtnExit"
+                Content="Вернуться назад"
+                FontSize="20"
+                HorizontalAlignment="Right"
+                Height="40"
+                Width="180"
+                FontWeight="Bold"
+                VerticalAlignment="Top"
+                Margin="0 15 20 0"
+                BorderThickness="0 0 0 0"
+                Foreground="White"
+                Background="#FFA2CEF9"
+                Click="BtnExit_Click"/>
+        <ComboBox Height="35"
+                  Width="170"
+                  Margin="0 60 20 0"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Right"
+                  VerticalContentAlignment="Center"
+                  FontSize="14"
+                  HorizontalContentAlignment="Center"
+                  BorderThickness="2"
+                  BorderBrush="Black">
+            <ComboBoxItem Content="Отчет по Продажам" 
+                          IsSelected="True"/>
+        </ComboBox>
+        <Button Width="702"
+                Height="403"
+                Margin="0,80,0,0">
+            <TextBlock Width="700"
+                   Height="400"
+                   Background="#FFB0D2F3"
+            />
+        </Button>
+        
+    </Grid>
+</Window>

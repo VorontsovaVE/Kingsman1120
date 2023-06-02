@@ -51,5 +51,6 @@ namespace Kingsman20.Windows.Add
 
             this.Close();
         }
+       
     }
 }

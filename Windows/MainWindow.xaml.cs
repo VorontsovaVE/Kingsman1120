@@ -47,5 +47,12 @@ namespace Kingsman20
             serviceWindow.Show();
             this.Close();
         }
+
+        private void BtnReport_Click(object sender, RoutedEventArgs e)
+        {
+            ReportWindow reportWindow = new ReportWindow();
+            reportWindow.Show();
+            this.Close();
+        }
     }
 }

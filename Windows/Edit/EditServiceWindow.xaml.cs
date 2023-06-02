@@ -24,7 +24,7 @@ namespace Kingsman20.Windows
         private bool isEdit = false;
 
         public EditServiceWindow()
-        {
+        {   
             InitializeComponent();
             isEdit = false;
         }

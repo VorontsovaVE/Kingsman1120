@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kingsman20.ClassHelper
-
+namespace Kingsman20.DataBase
 {
     using System;
     using System.Collections.Generic;
-    internal class CartAdd
+
+    public partial class Service
     {
-        public int Count { get; set; }
+        public int Quantity { get; set; }
     }
 }

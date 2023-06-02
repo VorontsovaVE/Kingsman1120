@@ -5,8 +5,204 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kingsman20.Windows.Main"
         mc:Ignorable="d"
-        Title="ClientInfWindow" Height="450" Width="800">
+        Title="ClientInfWindow" Height="585" Width="1400"
+        Background="#FFA2CEF9" 
+        WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="BtnExit"
+                Content="Вернуться назад"
+                FontSize="18"
+                HorizontalAlignment="Right"
+                Height="40"
+                Width="150"
+                FontWeight="Bold"
+                VerticalAlignment="Top"
+                Margin="0 5 20 0"
+                BorderThickness="0 0 0 0"
+                Foreground="White"
+                Background="#FFA2CEF9"
+                Click="BtnExit_Click"/>
+        <TextBlock Text="Список Клиентов"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Left"
+                   Margin="20 5 0 0" 
+                   Foreground="White"/>
+        <Button Margin="0 10 0 0"
+                Grid.Row="1"
+                HorizontalAlignment="Left"
+                Width="1400"
+                Background="#FFB0D2F3">
+            <Grid Margin="15 0 0 0"
+              Width="1360">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Имя"
+                       FontSize="14"
+                       Grid.Column="0"
+                       />
+                <TextBlock Text="Фамилия"
+                       FontSize="14"
+                       Grid.Column="1"
+                       />
+                <TextBlock Text="Отчество"
+                       FontSize="14"
+                       Grid.Column="2"
+                       />
+                <TextBlock Text="Пол"
+                       FontSize="14"
+                       Grid.Column="3"
+                       />
+                <TextBlock Text="Дата рождения"
+                       FontSize="14"
+                       Grid.Column="4"
+                       />
+                <TextBlock Text="Телефон"
+                       FontSize="14"
+                       Grid.Column="5"
+                       />
+                <TextBlock Text="Почта"
+                       FontSize="14"
+                       Grid.Column="6"
+                       />
+                <TextBlock Text="Размер верха"
+                       FontSize="14"
+                       Grid.Column="7"
+                       />
+                <TextBlock Text="Размер низа"
+                       FontSize="14"
+                       Grid.Column="8"
+                       />
+                <TextBlock Text="Размер обуви"
+                       FontSize="14"
+                       Grid.Column="9"
+                       />
+                
+                <TextBlock Text="Скидка"
+                       FontSize="14"
+                       Grid.Column="11"
+                       />
+                <TextBlock Text="Пароль"
+                       FontSize="14"
+                       Grid.Column="12"
+                       />
+                <TextBlock Text="Логин"
+                       FontSize="14"
+                       Grid.Column="10"
+                       />
+            </Grid>
+        </Button>
+        <ItemsControl x:Name="LvClient" 
+                      Margin="20 0 0 0"
+                      Grid.Row="2"
+                      d:ItemsSource="{d:SampleData ItemCount=5}"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                      Background="Transparent"
+                      >
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="50"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding LastName}"
+                                   FontSize="14"
+                                   Grid.Column="0"/>
+                        <TextBlock Text="{Binding FirstName}"
+                                   FontSize="14"
+                                   Grid.Column="1"/>
+                        <TextBlock Text="{Binding Patronymic}"
+                                   FontSize="14"
+                                   Grid.Column="2"/>
+                        <TextBlock Text="{Binding Gender.Name}" 
+                                   FontSize="14"
+                                   Grid.Column="3"/>
+                        <TextBlock Text="{Binding Bithday}" 
+                                   FontSize="14"
+                                   Grid.Column="4"/>
+                        <TextBlock Text="{Binding Phone}"
+                                   FontSize="14"
+                                   Grid.Column="5"/>
+                        <TextBlock Text="{Binding Email}"
+                                   FontSize="14"
+                                   Grid.Column="6"/>
+                        <TextBlock Text="{Binding Size.Size}"
+                                   FontSize="14"
+                                   Grid.Column="7"/>
+                        <TextBlock Text="{Binding Size.Size}"
+                                   FontSize="14"
+                                   Grid.Column="8"/>
+                        <TextBlock Text="{Binding BootsSize}"
+                                   FontSize="14"
+                                   Grid.Column="9"/>
+                        <TextBlock Text="{Binding Discount}"
+                                   FontSize="14"
+                                   Grid.Column="10"/>
+                        <TextBlock Text="{Binding Password}"
+                                   FontSize="14"
+                                   Grid.Column="11"/>
+                        <TextBlock Text="{Binding Login}"
+                                   FontSize="14"
+                                   Grid.Column="12"/>
+                        <Button x:Name="BtnEditClient"
+                                Width="20"
+                                Height="20"
+                                HorizontalAlignment="Left"
+                                Background="{x:Null}"
+                                BorderThickness="0"
+                                Click="BtnEditClient_Click"
+                                Grid.Column="13">
+                            <Image Source="/Res/ServiceImage/ikonki/edit.png" />
+                        </Button>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <Button Grid.Row="3"
+            x:Name="BtnAddClient"
+                Width="40"
+                Height="40"
+                Background="{x:Null}"
+                BorderThickness="0"
+                HorizontalAlignment="Right"
+                Margin="0 0 65 0"
+                Click="BtnAddClient_Click">
+            <Image Source="/Res/ServiceImage/ikonki/add.png" />
+        </Button>
         
     </Grid>
 </Window>
