@@ -50,11 +50,14 @@
 
 ![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/2d95e350-12f8-4ed0-81a9-2ecac289cb31)
 
-<b>Список Сотрудников/Клиентов</b>
+<b>Список Сотрудников + добавление/изменение (доделать изменение)</b>
 
 ![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/05c44b8c-a4fb-4b76-884d-cd0d2d17d9b9)
 
-![image](https://user-images.githubusercontent.com/126571078/231736510-2d0ae6b9-f4a4-4308-9da8-8be621380afe.png)
+![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/24ade0cc-cd77-40e4-821d-dbcedd1a0cdc)
+
+![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/98ca8573-c6e6-4cf6-a06f-bb919f7727f1)
+
 
 <b>Добавление в корзину</b>
 
