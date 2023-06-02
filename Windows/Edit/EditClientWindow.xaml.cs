@@ -36,7 +36,15 @@ namespace Kingsman20.Windows.Edit
             editClient = client;
 
             //заполнение размера
+            CmbTopSize.ItemsSource = ClassHelper.EF.Context.Size.ToList();
+            CmbTopSize.DisplayMemberPath = "Size";
+
+            CmbBottomSize.ItemsSource = ClassHelper.EF.Context.Size.ToList();
+            CmbBottomSize.DisplayMemberPath = "Size";
+
             //заполнение гендера
+            CmbGender.ItemsSource = ClassHelper.EF.Context.Gender.ToList();
+            CmbGender.DisplayMemberPath = "Name";
 
             //заполнение полей
             TbLNameClient.Text = client.LastName;
@@ -52,11 +60,13 @@ namespace Kingsman20.Windows.Edit
             {
                  client.BootsSize = Convert.ToDecimal(TbBootsSize.Text);
             }
-            
-
 
             //заполнение размера
+            CmbTopSize.SelectedItem = ClassHelper.EF.Context.Size.Where(i => i.IDSize == client.IdTopSIze).FirstOrDefault();
+            CmbBottomSize.SelectedItem = ClassHelper.EF.Context.Size.Where(i => i.IDSize == client.IdTopSIze).FirstOrDefault();
+
             //заполнение гендера
+            CmbGender.SelectedItem = ClassHelper.EF.Context.Gender.Where(i => i.IDGender == client.IdGender).FirstOrDefault();
         }
 
         private void BtnEditClient_Click(object sender, RoutedEventArgs e)
