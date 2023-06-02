@@ -52,7 +52,7 @@
 
 <b>Список Сотрудников/Клиентов</b>
 
-![image](https://user-images.githubusercontent.com/126571078/231736453-e2c9cfa9-5b08-4756-b7ae-0f91e8dbaf5d.png)
+![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/05c44b8c-a4fb-4b76-884d-cd0d2d17d9b9)
 
 ![image](https://user-images.githubusercontent.com/126571078/231736510-2d0ae6b9-f4a4-4308-9da8-8be621380afe.png)
 
