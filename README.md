@@ -58,7 +58,7 @@
 
 ![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/98ca8573-c6e6-4cf6-a06f-bb919f7727f1)
 
-![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/a397cac8-e91d-44e6-ac9d-cabcf20687bb)
+
 
 <b>Добавление в корзину</b>
 
