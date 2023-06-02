@@ -72,6 +72,9 @@
 
 ![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/5c8b4e3b-9442-40e9-94f5-33b2b363b36c)
 
+![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/81527091-7c97-4deb-8432-677045a8d41d)
+
+
 <b>Отчет</b>
 
 ![image](https://github.com/VorontsovaVE/Kingsman20/assets/126570601/73ffaa0d-b8df-4b05-b852-beb8817d161c)
